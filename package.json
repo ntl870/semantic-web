@@ -1,0 +1,11 @@
+{
+  "name": "certificate-site",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "lerna": "^5.1.6"
+  },
+  "scripts": {
+    "dev": "lerna run dev --stream"
+  }
+}
