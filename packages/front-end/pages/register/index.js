@@ -1,4 +1,4 @@
-import { Input, Text } from "@chakra-ui/react";
+import { Input, Text, Textarea } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import Wrapper from "../../components/Wrapper";
 import { useState } from "react";
@@ -32,6 +32,7 @@ const RegisterPage = () => {
         name: inputs.username,
         avatar_hash: hash,
         avatar_name: inputs.avatar.name,
+        about: inputs.about,
       });
       router.push("/login");
     } catch (e) {
@@ -80,6 +81,17 @@ const RegisterPage = () => {
               setInputs((prev) => ({
                 ...prev,
                 password: e.target.value,
+              }))
+            }
+          />
+          <Textarea
+            marginBottom="5"
+            type="text"
+            placeholder="About"
+            onChange={(e) =>
+              setInputs((prev) => ({
+                ...prev,
+                about: e.target.value,
               }))
             }
           />
